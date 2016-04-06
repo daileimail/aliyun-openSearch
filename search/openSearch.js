@@ -36,7 +36,7 @@ module.exports.getDateFromSearchEagin = function(indexName,query,callback){
             var buf = new Buffer(chunks);
             var date = JSON.parse(buf.toString());
             if(date.status == 'OK'){
-                callback(null,date.result.items);
+                callback(null,date);
             }else {
                 callback(date.errors);
             }
